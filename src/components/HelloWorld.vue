@@ -18,31 +18,29 @@
 
         mounted() {
             let that = this
-            document.addEventListener('DOMContentLoaded', function () {
-                var calendarEl = document.getElementById('calendar');
-                let calendar = new Calendar(calendarEl, {
-                    plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin],
-                    initialView: 'dayGridMonth',
-                    initialDate: '2021-01-07',
-                    navLinks: true, //可以单击日期/星期名称来浏览视图
-                    locales: [esLocale, frLocale],//用于转中文
-                    locale: "zh",//用于转中文
-                    buttonText: {today: '今天', month: '月', week: '周', day: '天', list: '列表'},
-                    headerToolbar: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-                    },
-                    events: function (info, successCallback, failureCallback) {
-                        that.al(info, successCallback, failureCallback)
-                    },
-                });
-                calendar.on('dateClick', function (info) {
-                    //点击某一个日程
-                    console.log('clicked on ' + info.dateStr);
-                });
-                calendar.render();
+            var calendarEl = document.getElementById('calendar');
+            let calendar = new Calendar(calendarEl, {
+                plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin],
+                initialView: 'dayGridMonth',
+                initialDate: '2021-01-07',
+                navLinks: true, //可以单击日期/星期名称来浏览视图
+                locales: [esLocale, frLocale],//用于转中文
+                locale: "zh",//用于转中文
+                buttonText: {today: '今天', month: '月', week: '周', day: '天', list: '列表'},
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                events: function (info, successCallback, failureCallback) {
+                    that.al(info, successCallback, failureCallback)
+                },
             });
+            calendar.on('dateClick', function (info) {
+                //点击某一个日程
+                console.log('clicked on ' + info.dateStr);
+            });
+            calendar.render();
         },
         methods: {
             // eslint-disable-next-line no-unused-vars
