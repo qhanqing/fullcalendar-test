@@ -1,24 +1,10 @@
-# fullcalendar-test
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+安装<br/>
+npm install --save @fullcalendar/core @fullcalendar/daygrid <br/>
+npm install --save @fullcalendar/interaction <br/>
+npm install --save @fullcalendar/timegrid <br/>
+npm install --save @fullcalendar/list <br/>
+<br/>
+官方文档
+https://fullcalendar.io/docs/initialDate <br/>
+插件索引
+https://fullcalendar.io/docs/plugin-index
