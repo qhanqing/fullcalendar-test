@@ -21,6 +21,7 @@
             var calendarEl = document.getElementById('calendar');
             let calendar = new Calendar(calendarEl, {
                 plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin, listPlugin],
+                schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',//试用版 免费版码
                 initialView: 'dayGridMonth',
                 initialDate: '2021-01-07',
                 navLinks: true, //可以单击日期/星期名称来浏览视图
@@ -33,16 +34,19 @@
                     right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
                 },
                 events: function (info, successCallback, failureCallback) {
+                    //点击切换月份 从后端获取数据
                     that.al(info, successCallback, failureCallback)
                 },
             });
             calendar.on('dateClick', function (info) {
-                //点击某一个日程
+                //点击某一个日程 点击某一天
                 console.log('clicked on ' + info.dateStr);
+                that.clickUse(info.dateStr)
             });
             calendar.render();
         },
         methods: {
+            // 点击切换月份 从后端获取数据
             // eslint-disable-next-line no-unused-vars
             al(info, successCallback, failureCallback) {
                 this.getList()
@@ -52,6 +56,9 @@
             getList() {
 
             },
+            //点击某一天
+            clickUse() {
+            }
         },
         data() {
             return {
