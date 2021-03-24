@@ -8,3 +8,10 @@ npm install --save @fullcalendar/list <br/>
 https://fullcalendar.io/docs/initialDate <br/>
 插件索引
 https://fullcalendar.io/docs/plugin-index
+
+特殊插件 tooltip提示插件  <br/>
+tippy.js
+npm i tippy.js
+
+***图表<br/>
+![Image text](src/assets/state/index.png)
