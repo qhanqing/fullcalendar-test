@@ -26,6 +26,8 @@ npm install --save @fullcalendar/list <br/>
 
 ###### 2、使用
 在要使用的页面中加入以下依赖 <br/>
+
+
     import {Calendar} from '@fullcalendar/core';//npm install --save @fullcalendar/core @fullcalendar/daygrid
     import dayGridPlugin from '@fullcalendar/daygrid';
     import interactionPlugin from '@fullcalendar/interaction'//npm install --save @fullcalendar/interaction
